@@ -22,7 +22,9 @@ public class SimplesCalculadora {
 
 			switch (opcao) {
 				case 1:
-					
+					numero1 = Double.parseDouble(JOptionPane.showInputDialog("Informe o segundo numero"));
+					numero2 = Double.parseDouble(JOptionPane.showInputDialog("Informe o segundo numero"));
+					JOptionPane.showMessageDialog(null, "Resultado\n" + numero1 + " + " + numero2 + " = " + (numero1 + numero2));
 					break;
 	
 				case 2:
