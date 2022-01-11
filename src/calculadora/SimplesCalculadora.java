@@ -6,22 +6,37 @@ public class SimplesCalculadora {
 
 	public static void main(String[] args) {
 		boolean sair = true;
-		int opcao;
+		String opcao;
+		int op = 0;
 		double numero1;
 		double numero2;
-
+		boolean numero = true;
 		do {
 			
-			opcao = Integer.parseInt(JOptionPane.showInputDialog(
+			opcao = JOptionPane.showInputDialog(
 											  "Escolha uma opção\n"
 											+ "1 - Somar\n"
 											+ "2 - Subtrair\n"
 											+ "3 - Multiplicar\n"
 											+ "4 - Dividir\n"
 											+ "5 - Sair"
-									));
+									);
+			
+			for (int i = 0; i < opcao.length(); i++) {
+	            if (!Character.isDigit(opcao.charAt(i))) {
+	                numero = false;
+	            }
+	        }
+			
+			if (numero) {
+				op = Integer.parseInt(opcao);
+				if(op > 5) {
+					op = 0;
+				}
+			}
+			
 
-			switch (opcao) {
+			switch (op) {
 				case 1:
 					numero1 = Double.parseDouble(JOptionPane.showInputDialog("Informe o primeiro numero"));
 					numero2 = Double.parseDouble(JOptionPane.showInputDialog("Informe o segundo numero"));
@@ -51,7 +66,8 @@ public class SimplesCalculadora {
 					sair = false;
 					break;
 	
-				default:
+				case 0:
+					JOptionPane.showMessageDialog(null, "Valor invalido, tente novamente");
 					break;
 			}
 		} while (sair);
