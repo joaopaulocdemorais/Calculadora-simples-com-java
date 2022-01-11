@@ -12,13 +12,13 @@ public class SimplesCalculadora {
 
 		do {
 			
-			JOptionPane.showInputDialog(
-					  "Escolha uma opção\n"
-					+ "1 - Somar\n"
-					+ "2 - Subtrair\n"
-					+ "3 - Multiplicar\n"
-					+ "4 - Dividir\n"
-			);
+			opcao = Integer.parseInt(JOptionPane.showInputDialog(
+											  "Escolha uma opção\n"
+											+ "1 - Somar\n"
+											+ "2 - Subtrair\n"
+											+ "3 - Multiplicar\n"
+											+ "4 - Dividir\n"
+									));
 
 			switch (opcao) {
 				case 1:
