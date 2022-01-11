@@ -6,7 +6,7 @@ public class SimplesCalculadora {
 
 	public static void main(String[] args) {
 		boolean sair = false;
-		int opcao = 1;
+		int opcao = 2;
 		double numero1;
 		double numero2;
 
@@ -22,13 +22,15 @@ public class SimplesCalculadora {
 
 			switch (opcao) {
 				case 1:
-					numero1 = Double.parseDouble(JOptionPane.showInputDialog("Informe o segundo numero"));
+					numero1 = Double.parseDouble(JOptionPane.showInputDialog("Informe o primeiro numero"));
 					numero2 = Double.parseDouble(JOptionPane.showInputDialog("Informe o segundo numero"));
 					JOptionPane.showMessageDialog(null, "Resultado\n" + numero1 + " + " + numero2 + " = " + (numero1 + numero2));
 					break;
 	
 				case 2:
-					
+					numero1 = Double.parseDouble(JOptionPane.showInputDialog("Informe o primeiro numero"));
+					numero2 = Double.parseDouble(JOptionPane.showInputDialog("Informe o segundo numero"));
+					JOptionPane.showMessageDialog(null, "Resultado\n" + numero1 + " - " + numero2 + " = " + (numero1 - numero2));
 					break;
 	
 				case 3:
